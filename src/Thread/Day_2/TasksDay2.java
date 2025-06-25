@@ -53,7 +53,7 @@ class ExperimientWithThread extends Thread {
     }
 }
 
-public class task1 {
+public class TasksDay2 {
     public static void main(String[] args) {
         System.out.println("Thread from main:-- " + Thread.currentThread().getName());
 
