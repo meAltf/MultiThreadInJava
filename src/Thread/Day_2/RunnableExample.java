@@ -20,3 +20,5 @@ public class RunnableExample {
 /**
  * Runnable is better because Java supports only single inheritance, and it separates task (logic) from thread control.
  */
+
+/*  .run() just executes in the main thread, no concurrency. */
