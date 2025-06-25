@@ -1,4 +1,4 @@
-package Thread;
+package Thread.Day_1;
 
 public class mainThreadCheck {
 
