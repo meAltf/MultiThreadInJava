@@ -24,20 +24,34 @@ class MyThreadTask1 extends Thread {
  * It should print numbers from 1 to 10.
  * Run it using a new thread.
  */
-class MyThreadTask2 implements Runnable{
+class MyThreadTask2 implements Runnable {
     @Override
     public void run() {
-        for(int i=1; i<=10; i++){
-            System.out.print(i +" ");
+        for (int i = 1; i <= 10; i++) {
+            System.out.print(i + " ");
         }
     }
 }
 
 /**
- Task 3: Use Lambda expression with Runnable
- Print current time 3 times in a thread using lambda + Thread.sleep(1000).
+ * Task 3: Use Lambda expression with Runnable
+ * Print current time 3 times in a thread using lambda + Thread.sleep(1000).
  */
-// check directly main function for this task-3
+// ----- check directly main function for this task-3
+
+
+/**
+ * Task 4: Try this experiment
+ * Create a thread and call both .start() and .run() on it separately.
+ * Print "Inside run" from the run() method.
+ * Observe how many threads actually run.
+ */
+
+class ExperimientWithThread extends Thread {
+    public void run() {
+        System.out.println("Inside run " + Thread.currentThread().getName());
+    }
+}
 
 public class task1 {
     public static void main(String[] args) {
@@ -65,5 +79,12 @@ public class task1 {
         });
         thread.start();
 
+        /* Task-4 */
+        Thread threadTask4 = new ExperimientWithThread();
+        System.out.println("Calling run() directly: ");
+        threadTask4.run();
+
+        System.out.println("Calling start(): ");
+        threadTask4.start();
     }
 }
