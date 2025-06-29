@@ -1,0 +1,36 @@
+-- Thread Lifecycle, Sleep, Join, isAlive
+1. sleep()
+2. join()
+3. isAlive()
+
+-- LifeCycle states ( New -> Runnable -> Running -> Terminated )
+
+-- 🔄 Thread Lifecycle Overview
+
+1. New : Thread is created but not started.
+2. Runnable : Thread is ready to run, waiting for CPU.
+3. Running : Thread is executing.
+4. Blocked/waiting : Thread is paused, waiting for a resource or condition.
+5. Terminated(Dead) : Thread has finished execution.
+
+
+-- Example Diagram :
+
+New --> start() --> Runnable --> Running --> Terminated
+                             ↑        ↓
+                 waiting/sleep/join   yield()
+
+
+
+
+Notes :
+-- Lock :
+ i.  When a thread enters a synchronized method/block, it acquires a LOCK on the object.
+ ii. This lock prevents other thread to enter any other synchronized method/block on the same object.
+
+-- Synchronized method/block :
+ i.   If an object is visible to more than one thread, all reads & writes to that object's variable are done through synchronized methods.
+ ii.  Means, only one thread can execute the synchronized method at a time.
+ iii. Benefits- preventing thread interference and memory consistency errors.
+
+1. sleep() pauses the current thread without releasing any locks.
