@@ -1,0 +1,13 @@
+1. Thread priority:
+- Every thread has a priority (from 1 to 10) that suggests to the JVM schedular that how important thread is.
+
+JVM Schedular/Thread schedular :
+- It is a part of the JVM that decides which thread to run next when multiple threads are ready to run.
+- It manages CPU time allocation to each thread.
+- It consider thread priority, but doesn't guarantee order- ultimately relies on OS's native schedular
+- Multiple threads can be Runnable (ready to run), but only one thread (per CPU core) can run at a time.
+
+Priority constants:
+Thread.MIN_PRIORITY  = 1
+Thread.NORM_PRIORITY = 5 (default)
+Thread.MAX_PRIORITY  = 10
