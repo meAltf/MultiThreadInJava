@@ -1,0 +1,15 @@
+1. Daemon Threads :
+- A Daemon thread runs in the background to support other threads.
+- JVM automatically exits- if all non-daemon threads finished, even if daemon threads are running.
+
+-- Common use case:
+- Garbage collector
+- Background logging
+- Monitoring services
+
+
+-- Rules for Daemon Threads:
+1. must call setDaemon(true) before calling start()
+2. Can't set a thread as daemon after it has started
+
+Note: JVM ends after main thread finishes. daemon threads are terminated automatically.
