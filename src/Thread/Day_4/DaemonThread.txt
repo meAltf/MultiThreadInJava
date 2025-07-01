@@ -13,3 +13,10 @@
 2. Can't set a thread as daemon after it has started
 
 Note: JVM ends after main thread finishes. daemon threads are terminated automatically.
+
+NOTE: if you call setDaemon(true) after start() : throws IllegalThreadStateException
+
+NOTE: we can't make Main thread as daemon thread because it always a user thread.
+
+NOTE: why we use daemon thread:
+1. For background tasks that should not block JVM exit, like logging, garbage collector, auto-cleanup, health-checkups etc.
