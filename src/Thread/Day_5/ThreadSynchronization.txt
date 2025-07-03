@@ -2,4 +2,4 @@
 -- How to protect shared resource from concurrent access |
 
 1. Race condition :
-- When two or mote Threads access shared data and modify it at the same time, leading to unexpected results.
+- When two or more Threads access shared data and modify it at the same time, leading to unexpected results.
