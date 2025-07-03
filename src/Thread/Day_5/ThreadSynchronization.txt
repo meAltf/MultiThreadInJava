@@ -1,5 +1,23 @@
 -- Thread Synchronization (Critical Sections & Locks) |
 -- How to protect shared resource from concurrent access |
 
-1. Race condition :
+1. Thread-safe :
+- A method is a thread-safe, when it can be safely called by multiple threads at the same time,
+- Without corrupting data or producing wrong results.
+
+2. Race condition :
 - When two or more Threads access shared data and modify it at the same time, leading to unexpected results.
+
+3. Ways to make a method thread-safe :
+- Use synchronized
+- Use Lock
+- Use thread-safe data structure like AtomicInteger
+
+NOTE:
+i.   Use synchronized for simple locking.
+ii.  Use Lock if you need timeout, tryLock, or interruptible waits.
+iii. Use AtomicInteger for high-performance number handling (e.g., counters, IDs).
+
+4. Difference b/w synchronized block & method :
+- Synchronizing a block allow only to specific section (only critical section is locked)
+- Synchronizing a method locks entire method
