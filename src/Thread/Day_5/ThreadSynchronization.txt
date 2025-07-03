@@ -21,3 +21,5 @@ iii. Use AtomicInteger for high-performance number handling (e.g., counters, IDs
 4. Difference b/w synchronized block & method :
 - Synchronizing a block allow only to specific section (only critical section is locked)
 - Synchronizing a method locks entire method
+
+/** Done for day-5 **/
