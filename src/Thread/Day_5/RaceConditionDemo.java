@@ -31,7 +31,7 @@ public class RaceConditionDemo {
         thread1.join();
         thread2.join();
 
-        /** Everytime below line give unexpected count **/
+        /** Everytime below line give unexpected count because count is not atomic **/
         System.out.println("Final count: " + counter.count);
     }
 }
