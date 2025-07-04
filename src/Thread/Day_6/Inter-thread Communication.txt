@@ -11,8 +11,15 @@
 - I don't want the consumer run until the producer has made something or produce something
 - So for handing these types of scenario, wait() & notify() help.
 
+* Difference notify() & notifyAll()
+- notify() : wakes up only one waiting thread (chosen randomly)
+- notifyAll() : wakes up all waiting threads but only one will get the lock, rest will wait again.
 
+* Spurious wakeup -
+- A spurious wakeup occurs when a thread wakes up from waiting on a conditional variable and finds that the condition is still unsatisfied.
 
 * These all should be used inside synchronized method/block either it will throw- IllegalMonitorStateException.
+
+* Wait() resume automatically without notify(), because it wake up due to spurious wakeup. That's why we always use wait() inside loop not if.
 
 
