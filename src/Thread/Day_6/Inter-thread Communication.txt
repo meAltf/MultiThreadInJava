@@ -1,0 +1,18 @@
+** Inter-thread Communication –
+1. wait()
+2- notify()
+3- notifyAll()
+
+* Why Inter-thread communication -
+- Java threads can communicate each other to coordinate tasks.
+
+* Example
+- One thread produce data and another consumes the data
+- I don't want the consumer run until the producer has made something or produce something
+- So for handing these types of scenario, wait() & notify() help.
+
+
+
+* These all should be used inside synchronized method/block either it will throw- IllegalMonitorStateException.
+
+
