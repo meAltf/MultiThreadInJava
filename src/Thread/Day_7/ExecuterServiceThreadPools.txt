@@ -32,7 +32,7 @@ ii. Automatically manages thread reuse.
 
 2. Runnable (no return) -
 
-Runnable task = () -> System.out.println("Runnin taks.....");
+Runnable task = () -> System.out.println("Running tasks.....");
 executorServ.submit(task);
 
 3. Callable<V> (returns value) -
