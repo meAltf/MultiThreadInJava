@@ -24,7 +24,7 @@ This repository is a complete record of my 7-day deep dive into **Java Multithre
 
 ## 🚀 Next Topic
 
-    ##Stay tuned as I continue this journey with my next learning series on `[Your Next Topic]`.
+    ##Stay tuned as I continue this journey with my next learning series.
 
 ---
 
