@@ -1,0 +1,22 @@
+-- ExecutorService, Callable, Future, and Thread Pools
+
+- Modern concurrency tools for managing threads efficiently :
+- Executor service
+- Callable<V> vs Runnable
+- Future<V>
+- Thread pools (Executors.newFixedThreadPool() etc.
+
+
+* Issue with new Thread()...
+    new Thread(() -> {
+        // work
+    }).start();
+- Works for simpler tasks
+- Not scalable for large applications
+- No control over thread reuse, return values, cancellation etc.
+
+* Modern solution : Executor service ( A powerful thread pool manager than help you with )
+1. Submit tasks
+2. Control number of threads
+3. Shut down clearly
+4. Get return values (Future)
