@@ -1,0 +1,14 @@
+* Difference b/w Runnable & Callable -
+1. Runnable has run() method, but no return.
+2. Callable<V> has call() method, returns result & can throw checked exception.
+
+* What does Future.get() -
+1. It blocks and waits for the task to finish, then returns the result.
+
+* What happen if the task throws an exception -
+1. Calling future.get() will throw ExecutionException, which wraps the original exception.
+
+* the benefit of using thread pools (ExecutorService) over creating threads manually -
+1. Reuses thread -> better performance
+2. Avoids overhead of creating new Threads repeatedly
+3. Allow tasks queueing, timeout, cancellation
