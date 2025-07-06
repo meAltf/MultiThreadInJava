@@ -20,3 +20,32 @@
 2. Control number of threads
 3. Shut down clearly
 4. Get return values (Future)
+
+
+--- Technical role :
+1. Executor service -
+
+ExecutorService executorServ = Executors.newFixedThreadPools(3);
+
+i.  Creates a Thread pool with 3 threads.
+ii. Automatically manages thread reuse.
+
+2. Runnable (no return) -
+
+Runnable task = () -> System.out.println("Runnin taks.....");
+executorServ.submit(task);
+
+3. Callable<V> (returns value) -
+
+Callable<String> task = () -> {
+    Thread.sleep(1000);
+    return "Task results...";
+}
+Future<String> future = executorServ.submit(task);
+System.out.println("Future result: " + future.get()); // waits
+
+4. Shutting down Executor -
+
+executorServ.shutdown();  // graceful shutdown
+
+i. You should always shut down the executor to release resource
